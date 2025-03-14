@@ -1,5 +1,6 @@
 import { Hono } from 'hono'
 import { postAttend,getAllAttendents } from './service';
+import { cors } from "hono/cors"
 
 const app = new Hono()
 
@@ -30,8 +31,4 @@ app.get('/attend', async (c) => {
 
 export default {
   fetch: app.fetch,
-}
-
-function cors(): import("hono").MiddlewareHandler<import("hono/types").BlankEnv, "/*", {}> {
-  throw new Error('Function not implemented.');
 }
