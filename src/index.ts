@@ -31,3 +31,7 @@ app.get('/attend', async (c) => {
 export default {
   fetch: app.fetch,
 }
+
+function cors(): import("hono").MiddlewareHandler<import("hono/types").BlankEnv, "/*", {}> {
+  throw new Error('Function not implemented.');
+}
