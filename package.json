@@ -1,0 +1,19 @@
+{
+  "name": "iftar-api",
+  "scripts": {
+    "dev": "bun run --hot src/index.ts",
+    "db:migrate:dev": "prisma migrate dev",
+    "db:migrate:deploy": "prisma migrate deploy",
+    "db:studio": "bunx prisma studio",
+    "db:seed": "prisma db seed",
+    "generate": "prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.5.0",
+    "hono": "^4.7.4"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "prisma": "^6.5.0"
+  }
+}
